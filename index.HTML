@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="assets/app.js"></script>
+    <title>Unknown-Project</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#"><i class="fab fa-ravelry"></i><!--logo--> </a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#contributors">Contributors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#blog">Blog</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header with video background-->
+    <header class="video-header container" id="home">
+        <div class="fullscreen-video-wrap">
+            <video muted src="Media/IMG_6272.mp4" autoplay="true" loop="true"></video>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Welcome to Our Site</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint veniam modi quisquam perspiciatis accusamus repudiandae. Magni nesciunt aut libero esse?</p>
+            <!--PlaceHolder for sign in Authentication-->
+            <a href="#" class="btn btn-light">Sign in</a>
+        </div>
+    </header>
+
+    <!--About Section-->
+    <section class="about section" id="about">
+        <div class="container">
+        <h1>About Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias minus accusantium maiores excepturi aut perspiciatis, culpa cupiditate. Tempora molestias fuga quibusdam magnam voluptas. Molestiae suscipit dignissimos molestias repudiandae atque commodi! Cumque, voluptas maxime. Nostrum vel omnis repudiandae repellendus a, explicabo eius voluptas molestiae sint nobis atque magnam recusandae provident ullam!</p>
+        </div>
+    </section>
+    <!--Weather Api Widget?-->
+
+    <!--Recent Blog Post?-->
+    <div class="card-columns bg-dark d-flex justify-content-around" id="blog">
+    <div class="card border-0" style="width: 18rem;">
+            <img class="card-img-top" src="Images/IMG_2874.JPG" alt="Card image cap">
+            <div class="card-body">
+                <h3>Sporting Events</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    <div class="card border-0" style="width: 18rem;">
+            <img class="card-img-top" src="Images/IMG_2874.JPG" alt="Card image cap">
+            <div class="card-body">
+                <h3>Beach Goers</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    <div class="card border-0" style="width: 18rem;">
+            <img class="card-img-top" src="Images/IMG_2874.JPG" alt="Card image cap">
+            <div class="card-body">
+                <h3>Hiking</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+    <!--Contribution Section-->
+    <section class="contribution section" id="contributors">
+            <div class="container">
+            <h1>Contributors</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias minus accusantium maiores excepturi aut perspiciatis, culpa cupiditate. Tempora molestias fuga quibusdam magnam voluptas. Molestiae suscipit dignissimos molestias repudiandae atque commodi! Cumque, voluptas maxime. Nostrum vel omnis repudiandae repellendus a, explicabo eius voluptas molestiae sint nobis atque magnam recusandae provident ullam!</p>
+            </div>
+        </section>
+
+    <!--Footer-->
+    <footer id="main-footer" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center py-4 text-black">
+                    <h3>Unknown-Project</h3>
+                    <p>Copyright &copy; <span id="year"></span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

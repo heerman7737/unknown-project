@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="assets/style.css">-->
+    <!--Js link -->
+    <title>User-Interface</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+        <div class="container">
+            <a href="#" class="navbar-brand">Day Trips</a>
+           <!-- <button class="navbar-toogler" data-toggle="collapse" data-target="#userNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>--> 
+                <div class="collapse navbar-collapse" id="userNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">Dashboard</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">Post</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#" class="nav-link">Users</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="../index.HTML" class="nav-link">
+                                <i class="fas fa-user-times"></i>Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="main-header" class="py-2 bg-secondary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--Actions-->
+    <section id="actions" class="py-4 mb-4 bg-light ">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-dark btn-block" data-toggle="modal" data-target="#addPostModal">
+                    <i class="fas fa-plus"></i> Add Post
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Post Table-->
+    <section class="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Latest Post</h4>
+                        </div>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--Placeholder should be added dynamically with js-->
+                                <tr>
+                                    <td>1</td>
+                                    <td>Post One</td>
+                                    <td>Beach</td>
+                                    <td>March 29, 2019</td>
+                                    <td>
+                                    <a href="#" class="btn btn-primary">
+                                            <i class="fas fa-angle-double-right"></i>Details
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Modals for blog-->
+
+    <!--Add Post Modal -->
+<div class="modal fade" id="addPostModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title">Add Post</h5>
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="catagory">Catagory</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Beach Trips</option>
+                                <option value="">City Trips</option>
+                                <option value="">Sporting Events</option>
+                                <option value="">Shopping</option>
+                                <option value="">Transportation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Upload Image</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="image">
+                                <labe for="image" class="custom-file-label">Choose File</labe>
+                            </div>
+                            <small class="form-text text-muted">Max size 3mb </small>
+                        </div>
+                            <div class="form-group">
+                                <label for="body">Body</label>
+                                <textarea name="editor" class="form-control" id=""></textarea>
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">Save Changes</button>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="main-footer" class="bg-dark fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center py-4 text-white">
+                <h3>Unknown-Project</h3>
+                <p>Copyright &copy; <span id="year"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+<!--Script tags-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
