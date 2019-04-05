@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="UI.css">
     <!--<link rel="stylesheet" href="assets/style.css">-->
-    <!--Js link -->
     <title>User-Interface</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
         <div class="container">
-            <a href="#" class="navbar-brand">Day Trips</a>
-           <!-- <button class="navbar-toogler" data-toggle="collapse" data-target="#userNav">
-            <span class="navbar-toggler-icon"></span>
-            </button>--> 
+            <!--<a href="#" class="navbar-brand">Day Trips</a>
+           <button class="navbar-toogler" data-toggle="collapse" data-target="#userNav">
+            <span class="navbar-toggler-icon bg-dark"></span>
+            </button>-->
                 <div class="collapse navbar-collapse" id="userNav">
                     <ul class="navbar-nav">
                         <li class="nav-item px-2">
@@ -50,6 +50,7 @@
             </div>
         </div>
     </header>
+
 <!--Actions-->
     <section id="actions" class="py-4 mb-4 bg-light ">
         <div class="container ">
@@ -67,7 +68,7 @@
     <section class="post">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">
                             <h4>Latest Post</h4>
@@ -99,11 +100,34 @@
                         </table>
                     </div>
                 </div>
+                <div class="col-md-4 bg-dark card mt-1 mb-1">
+                    <!--Location-->
+                    
+                    <div class=" card-header bg-secondary mt-2 location">
+            
+                        <h3 class="location-timezone text-center text-white ">Location</h3> 
+                        
+
+                    </div>
+                        <!--Temperature-->
+                   
+                    <div class="card-body text-center text-white temperature">
+                        <div class="degree-section">
+                           
+                            <h2 class="temperature-degree"><i class="fas fa-spinner"></i></h2>
+                            
+                        </div>
+                        <div>
+                            <h4>It's looking...</h4>
+                            <div class="temperature-description">Searching...</div>
+    
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!--Modals for blog-->
-
+    
     <!--Add Post Modal -->
 <div class="modal fade" id="addPostModal">
     <div class="modal-dialog modal-lg">
@@ -152,7 +176,7 @@
 </div>
 
 <!--Footer-->
-<footer id="main-footer" class="bg-dark fixed-bottom">
+<footer id="main-footer" class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col text-center py-4 text-white">
@@ -164,6 +188,7 @@
     </footer>
 
 <!--Script tags-->
+    <script src="assets/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
