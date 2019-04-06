@@ -13,8 +13,8 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
         <div class="container">
-            <!--<a href="#" class="navbar-brand">Day Trips</a>
-           <button class="navbar-toogler" data-toggle="collapse" data-target="#userNav">
+            <a href="#" class="navbar-brand">Day Trips</a>
+           <!--<button class="navbar-toogler" data-toggle="collapse" data-target="#userNav">
             <span class="navbar-toggler-icon bg-dark"></span>
             </button>-->
                 <div class="collapse navbar-collapse" id="userNav">
@@ -52,21 +52,72 @@
     </header>
 
 <!--Actions-->
-    <section id="actions" class="py-4 mb-4 bg-light ">
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="#" class="btn btn-dark btn-block" data-toggle="modal" data-target="#addPostModal">
-                    <i class="fas fa-plus"></i> Add Post
-                    </a>
-                </div>
+<section id="actions" class="py-4 mb-4 bg-white ">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="btn btn-dark btn-block" data-toggle="modal" data-target="#addPostModal">
+                <i class="fas fa-plus"></i> Add Post
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+    <!--Search Post Icons-->
+    <div class="container d-flex  flex-wrap justify-content-around mb-5">
+        <div class="col-sm-2">
+            <div class="card-body bg-dark text-white text-center ">
+                <h4 class="display-5">
+                    <i class="fas fa-hotel"></i> 
+                </h4>
+                <p>Hotels</p>
+
+                <a href="#" class="btn btn-outline-light btn-sm">View</a>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card-body bg-info text-white text-center">
+                <h4 class="display-5">
+                    <i class="fas fa-utensils"></i>
+                </h4>
+                <p>Resturants</p>
+                <a href="#" class="btn btn-outline-light btn-sm">View</a>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card-body  bg-dark text-white text-center">         
+                <h4 class="display-5">
+                    <i class="fas fa-shopping-bag"></i>
+                </h4>
+                <p>Shopping</p>
+                <a href="#" class="btn btn-outline-light btn-sm">View</a>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card-body  bg-info text-white text-center">
+                <h4 class="display-5">
+                    <i class="fas fa-binoculars"></i>
+                </h4>
+                <p>Scenery</p>
+                <a href="#" class="btn btn-outline-light btn-sm">View</a>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card-body  bg-dark text-white text-center">
+                <h4 class="display-5">
+                    <i class="fas fa-cocktail"></i>
+                </h4>
+                <p>Night Life</p>
+                <a href="#" class="btn btn-outline-light btn-sm">View</a>
+            </div>
+        </div>
+    </div>
+
+
 
     <!--Post Table-->
     <section class="post">
-        <div class="container">
+        <div class="container d-flex mb-2">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card">
@@ -105,10 +156,11 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-md-4 bg-dark card mt-1 mb-1">
+                <!--Weather API-->
+                <div class="col-md-4 bg-dark card justify-content-center">
                     <!--Location-->
                     
-                    <div class=" card-header bg-secondary mt-2 location">
+                    <div class="card-header bg-secondary mt-2 location">
             
                         <h3 class="location-timezone text-center text-white ">Location</h3> 
                         
@@ -116,7 +168,7 @@
                     </div>
                         <!--Temperature-->
                    
-                    <div class="card-body text-center text-white temperature">
+                    <div class="card-body flex-wrap text-center text-white temperature">
                         <div class="degree-section">
                            
                             <h2 class="temperature-degree"><i class="fas fa-spinner"></i></h2>
@@ -182,7 +234,7 @@
 </div>
 
 <!--Footer-->
-<footer id="main-footer" class="bg-dark ">
+<footer id="main-footer" class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col text-center py-4 text-white">
