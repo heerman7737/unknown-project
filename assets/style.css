@@ -110,12 +110,12 @@ body{
 
 }
 
-#card1,#card2,#card3
+#card0,#card1,#card2
  {
-    height: 170px;
+    height: 250px;
     
 }
-#card-head1, #card-head2, #card-head3 {
+#card-head0, #card-head1, #card-head2 {
     white-space: nowrap;
     text-align: center;
   font-family: 'Bowlby One SC', cursive;
@@ -128,7 +128,7 @@ body{
 
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
 
-#card-body1, #card-body2, #card-body3 {
+#card-body0, #card-body1, #card-body2 {
     white-space: nowrap;
     text-align: center;
     font-family: 'Bowlby One SC', cursive;
