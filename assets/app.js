@@ -103,6 +103,7 @@ function initMap() {
     var map3 = new google.maps.Map(
         document.getElementById('map3'), { zoom: 15, center: uluru });
     
+
     // The marker, positioned at Uluru
     var marker1 = new google.maps.Marker({ position: howlin, map: map1 });
     var marker2 = new google.maps.Marker({ position: dodger, map: map2 });
@@ -111,3 +112,7 @@ function initMap() {
 
 }
 
+fitText(document.querySelector("#card-body2"), 0.38);
+// $('#card-head2').textfill({
+//     maxFontPixels: 200
+//   });

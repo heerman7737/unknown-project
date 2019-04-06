@@ -97,6 +97,37 @@ body{
 }
 
 .maps{
-    height: 400px;
+    height: 250px;
+    width: auto;
+
 }
 
+#card1,#card2,#card3
+ {
+    height: 170px;
+    
+}
+#card-head1, #card-head2, #card-head3 {
+    white-space: nowrap;
+    text-align: center;
+  font-family: 'Bowlby One SC', cursive;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background:white;
+  font-size: 23px;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Bowlby+One+/'); */
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+#card-body1, #card-body2, #card-body3 {
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Bowlby One SC', cursive;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background:white;
+    font-size: 15px;
+    }
