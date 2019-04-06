@@ -108,11 +108,4 @@ function initMap() {
     var marker1 = new google.maps.Marker({ position: howlin, map: map1 });
     var marker2 = new google.maps.Marker({ position: dodger, map: map2 });
     var marker3 = new google.maps.Marker({ position: uluru, map: map3 });
-    
-
 }
-
-fitText(document.querySelector("#card-body2"), 0.38);
-// $('#card-head2').textfill({
-//     maxFontPixels: 200
-//   });
