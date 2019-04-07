@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="UI.css">
-    <!--<link rel="stylesheet" href="assets/style.css">-->
+    <link rel="stylesheet" href="assets/WeatherAPI.css">
     <title>User-Interface</title>
 </head>
 <body>
@@ -25,9 +25,10 @@
                         <li class="nav-item px-2">
                             <a href="#" class="nav-link">Post</a>
                         </li>
-                        <li class="nav-item px-2">
+                        <!-- We do not need this portion
+                            <li class="nav-item px-2">
                             <a href="#" class="nav-link">Users</a>
-                        </li>
+                        </li>-->
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -40,7 +41,7 @@
         </div>
     </nav>
     <!-- Header -->
-    <header id="main-header" class="py-2 bg-secondary text-white">
+    <header id="main-header" class="py-2 bg-info text-white">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -50,17 +51,47 @@
         </div>
     </header>
 <!--Actions-->
-<section id="actions" class="py-4 mb-4 bg-white ">
+<section id="actions" class="py-4 mb-2 bg-white ">
     <div class="container ">
         <div class="row">
             <div class="col-md-4">
-                <a href="#" class="btn btn-dark btn-block" data-toggle="modal" data-target="#addPostModal">
+                <a href="blogpost.html" class="btn btn-dark btn-block" data-toggle="modal" data-target="#addPostModal">
                 <i class="fas fa-plus"></i> Add Post
                 </a>
             </div>
         </div>
     </div>
 </section>
+
+<!-- New Weather API -->
+<div class="container WeatherAPI mb-5 px-5 py-3" >
+    <div class="row justify-content-between">
+            <div class="col-4">
+                    <div class="location">   
+                        <h1 class="location-timezone">Wheather Report</h1>
+                    </div>  
+            </div>                  
+                <div class="col-xs-none ml-auto">
+                    <canvas class="icon" width="128" height="128"></canvas>
+                </div>
+    </div>
+
+    <div class="row justify-content-between">
+            <div class="col-4">
+                    <div class="temperature">
+                            <div class="degree-section">
+                                <h1 class="temperature-degree"></h1>
+                            </div>
+                    </div>
+            </div>
+                <div class="col-4 pt-2">
+                    <h3 class="temperature-description"></h3>
+                </div>
+          </div>
+</div>
+
+
+
     <!--Search Post Icons-->
     
     <div class="container d-flex  flex-wrap justify-content-around mb-5">
@@ -70,7 +101,7 @@
                     <i class="fas fa-hotel"></i> 
                 </h4>
                 <p>Hotels</p>
-                <a href="#" class="btn btn-outline-light btn-sm">View</a>
+                <a href="https://www.hotels.com/" class="btn btn-outline-light btn-sm">View</a>
             </div>
         </div>
         <div class="col-sm-2">
@@ -112,9 +143,9 @@
     </div>
     <!--Post Table-->
     <section class="post">
-        <div class="container d-flex mb-2">
+        <div class="container mb-5">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-xl">
                     <div class="card">
                         <div class="card-header">
                             <h4>Latest Post</h4>
@@ -151,32 +182,6 @@
                         </table>
                     </div>
                 </div>
-                <!--Weather API-->
-                <div class="col-md-4 bg-dark card justify-content-center">
-                    <!--Location-->
-                    
-                    <div class="card-header bg-secondary mt-2 location">
-            
-                        <h3 class="location-timezone text-center text-white ">Location</h3> 
-                        
-                    </div>
-                        <!--Temperature-->
-                   
-                    <div class="card-body flex-wrap text-center text-white temperature">
-                        <div class="degree-section">
-                           
-                            <h2 class="temperature-degree"><i class="fas fa-spinner"></i></h2>
-                            
-                        </div>
-                        <div>
-                            <h4>It's looking...</h4>
-                            <div class="temperature-description">Searching...</div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
     
     <!--Add Post Modal -->
@@ -239,6 +244,7 @@
     </footer>
 <!--Script tags-->
     <script src="assets/app.js"></script>
+    <script src="assets/skycon.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 <script src="../assets/UI.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
