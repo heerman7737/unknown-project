@@ -103,12 +103,13 @@ body{
 
 }
 
-#card0,#card1,#card2
- {
+#card1,#card2,#card3 {
     height: 250px;
     
 }
-#card-head0, #card-head1, #card-head2 {
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+#card-head1, #card-head2, #card-head3 {
     white-space: nowrap;
     text-align: center;
   font-family: 'Bowlby One SC', cursive;
@@ -119,9 +120,9 @@ body{
   font-size: 23px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
 
-#card-body0, #card-body1, #card-body2 {
+
+#card-body1, #card-body2, #card-body3 {
     white-space: nowrap;
     text-align: center;
     font-family: 'Bowlby One SC', cursive;
@@ -131,3 +132,18 @@ body{
     background:white;
     font-size: 15px;
     }
+
+.c-card-body {
+    
+    background:#333;
+    height: auto;
+    width: 100%;
+    white-space: normal;
+    overflow-x: auto;
+    /* word-wrap: break-word; */
+}
+
+.pic {
+    background:#333;
+    
+}
