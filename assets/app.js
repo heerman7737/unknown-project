@@ -1,6 +1,6 @@
 
 let topic=["restaurant","stadiumsarenas","shopping"]
-for(let i=0;i<=topic.length;i++){
+for(let i=0;i<topic.length;i++){
 var API_KEY = 'HAYOJZ9OtK2eKFqerVsFRG73lttXlxbFYnS3zysVua3xHZPAhjK7LQJsTQfdp5a8S3a9b9bdsMNOj-Fuf1vSrs43wSROe-ldP55_B3JSNdE58PnbHWv0kBIfO5WdXHYx';
 var URL1 = `https://api.yelp.com/v3/businesses/search?location=losangeles&term&categories=${topic[i]}&limit=10`;
 var queryURL1 = `https://cors-anywhere.herokuapp.com/${URL1}`;
@@ -22,7 +22,7 @@ var queryURL1 = `https://cors-anywhere.herokuapp.com/${URL1}`;
         
        
         let placeElem = document.getElementById(`card${i}`)
-        placeElem.setAttribute('src', data.businesses[5].image_url)
+        placeElem.setAttribute("src",data.businesses[5].image_url)
         let placeName = document.getElementById(`card-head${i}`)
         placeName.innerHTML = data.businesses[5].name
         let placeLocation = document.getElementById(`card-body${i}`)
