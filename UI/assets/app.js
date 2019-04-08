@@ -20,12 +20,21 @@ window.addEventListener("load" , ()=> {
             })
             .then(data => {
                 //console.log(data);
-                const {temperature, summary} = data.currently;
+                const {temperature, summary, icon } = data.currently;
                 //set Dom Elements from the api 
                 temperatureDegree.textContent = temperature + " F ";
-                temperatureDescription.textContent = summary;
+                temperatureDescription.textContent = "Conditions:  " + summary;
                 locationTimezone.textContent = data.timezone;
+                // set icon 
+                setIcons(icon, document.querySelector(".icon"));
             });
         });
+    }
+
+    function setIcons(icon, iconID) {
+        const skycons = new Skycons({ color: "white" });
+        const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+        skycons.play();
+        return skycons.set(iconID, Skycons[currentIcon]);
     }
 });
