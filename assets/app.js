@@ -19,7 +19,7 @@ var queryURL1 = `https://cors-anywhere.herokuapp.com/${URL1}`;
 }).then(res => res.json())
 
     .then(data => {
-        console.log(data)
+        
        
         let placeElem = document.getElementById(`card${i}`)
         placeElem.setAttribute('src', data.businesses[5].image_url)

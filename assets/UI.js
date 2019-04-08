@@ -12,6 +12,8 @@ var config = {
 
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     let db=firebase.firestore();
+    let auth=firebase.auth();
+  
     let title,category
     document.getElementById("submit").addEventListener("click",e=>{
     e.preventDefault();
@@ -45,4 +47,11 @@ var config = {
 
 
     })
+})
+document.querySelector("#logout").addEventListener("click",(e)=>{
+  e.preventDefault()
+  auth.signOut().then(()=>{
+      console.log("work")
+      window.location = '../index.HTML'
+  })
 })
