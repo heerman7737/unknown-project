@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Oleo+Script" rel="stylesheet">
-    <script src="assets/app.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa-rTlGu7nL4Cbr3aw-5ttgq4X9danh5s&callback=initMap"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>Joy Planner</title>
 </head>
 <body>
@@ -35,6 +35,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#blog">Blog</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#login-modal">Already a member?</a>
+                </li>
             </ul>
             </div>
         </div>
@@ -50,7 +53,9 @@
             <h1>Welcome to Our Site</h1>
             <p>Ready to explore Los Angeles the efficient way? We can help with that! Make and compare plans today!</p>
             <!--PlaceHolder for sign in Authentication-->
-            <a href="#" class="btn btn-light">Sign in</a>
+            <a href="#"class="btn btn-light" data-toggle="modal" data-target="#signup-modal">
+                    Sign up
+                </a>
         </div>
     </header>
 
@@ -61,8 +66,68 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias minus accusantium maiores excepturi aut perspiciatis, culpa cupiditate. Tempora molestias fuga quibusdam magnam voluptas. Molestiae suscipit dignissimos molestias repudiandae atque commodi! Cumque, voluptas maxime. Nostrum vel omnis repudiandae repellendus a, explicabo eius voluptas molestiae sint nobis atque magnam recusandae provident ullam!</p>
         </div>
     </section>
-   
+   <!-- Sign up -->
 
+      
+      <!-- Modal -->
+      <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" class="form-control" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" class="form-control" id="signup-password" required>
+                        </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="signup-button" type="button" class="btn btn-primary">Sign up</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--Log in  -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" class="form-control" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+            </div>
+        </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="login-button"type="button" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <!--Recent Blog Post?-->
     <div class="card-columns bg-dark d-flex justify-content-around" id="blog">
 
@@ -111,5 +176,12 @@
                 </div>
             </div>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa-rTlGu7nL4Cbr3aw-5ttgq4X9danh5s&callback=initMap"></script>
+        <script src="./assets/app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="./assets/auth.js"></script>
 </body>
 </html>
