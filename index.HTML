@@ -35,7 +35,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#blog">Blog</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item logged-out">
                     <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#login-modal">Already a member?</a>
                 </li>
             </ul>
@@ -53,8 +53,11 @@
             <h1>Welcome to Our Site</h1>
             <p>Ready to explore Los Angeles the efficient way? We can help with that! Make and compare plans today!</p>
             <!--PlaceHolder for sign in Authentication-->
-            <a href="#"class="btn btn-light" data-toggle="modal" data-target="#signup-modal">
+            <a href="#"class="btn btn-light logged-out" data-toggle="modal" data-target="#signup-modal">
                     Sign up
+                </a>
+            <a href="./UI/UI.HTML"class="btn btn-light logged-in">
+                    My Dashboard
                 </a>
         </div>
     </header>

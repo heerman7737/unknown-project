@@ -51,4 +51,28 @@ auth.onAuthStateChanged(user=>{
     else{
         console.log("user logged out")
     }
-})
+    
+        if(user){
+            document.querySelectorAll(".logged-in").forEach(items=>
+                items.setAttribute("style","display:block width:10px")
+                
+            
+            )
+            document.querySelectorAll(".logged-out").forEach(items=>
+                items.setAttribute("style","display:none")
+               
+            
+            )
+        }
+        else{
+            document.querySelectorAll(".logged-in").forEach(items=>
+                items.setAttribute("style","display:none")
+               
+            )
+            document.querySelectorAll(".logged-out").forEach(items=>
+                items.setAttribute("style","display:block  width:10px")
+                
+            )
+        }
+    }
+)
