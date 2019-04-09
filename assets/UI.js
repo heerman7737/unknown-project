@@ -15,39 +15,48 @@ var config = {
     let auth=firebase.auth();
   
     let title,category
-    document.getElementById("submit").addEventListener("click",e=>{
-    e.preventDefault();
-    let title=document.getElementById("title").value.trim();
-    console.log(title);
-    let category=document.getElementById("category").value.trim();
-    console.log(category)
-    db.collection("Post").doc(document.getElementById("title").value).set({
-        title: title,
-        category:category,
+    auth.onAuthStateChanged(user=>{
+      if(user){
+        document.getElementById("submit").addEventListener("click",e=>{
+          e.preventDefault();
+          let title=document.getElementById("title").value.trim();
+          console.log(title);
+          let category=document.getElementById("category").value.trim();
+          console.log(category)
+          let date=document.getElementById("date").value.trim();
+          console.log(date)
+          db.collection("Post").doc(document.getElementById("title").value).set({
+              title: title,
+              category:category,
+              date:date
+      
+           })
+           document.getElementById("title").value=""
+           document.getElementById("category").value=""
+      
+        })
+        let number=1
+        db.collection('Post').onSnapshot(({docs})=>{
+          docs.forEach(doc=>{
+              console.log(doc.data())
+              let {title,category}=doc.data()
+              let currentPost=document.createElement("tr")
+              number++
+              currentPost.innerHTML=`
+              <tr>
+                  <td>${number}</td>
+                  <td>${title}</td>
+                  <td>${category}</td>
+                  <td>${date}</td>
+                  </tr>`
+              document.getElementById("displayblog").append(currentPost)
+      
+      
+          })
+      })
+      
+    }})
 
-     })
-     document.getElementById("title").value=""
-     document.getElementById("category").value=""
-
-  })
-  let number=1
-  db.collection('Post').onSnapshot(({docs})=>{
-    docs.forEach(doc=>{
-        console.log(doc.data())
-        let {title,category}=doc.data()
-        let currentPost=document.createElement("tr")
-        number++
-        currentPost.innerHTML=`
-        <tr>
-            <td>${number}</td>
-            <td>${title}</td>
-            <td>${category}</td>
-            </tr>`
-        document.getElementById("displayblog").append(currentPost)
-
-
-    })
-})
 document.querySelector("#logout").addEventListener("click",(e)=>{
   e.preventDefault()
   auth.signOut().then(()=>{

@@ -70,9 +70,20 @@ auth.onAuthStateChanged(user=>{
                
             )
             document.querySelectorAll(".logged-out").forEach(items=>
-                items.setAttribute("style","display:block  width:10px")
+                items.setAttribute("style","display:block ")
                 
             )
         }
     }
 )
+// service cloud.firestore {
+//     match /databases/{database}/documents {
+//       // Make sure the uid of the requesting user matches name of the user
+//       // document. The wildcard expression {userId} makes the userId variable
+//       // available in rules.
+//       match /users/{userId} {
+//         allow read, update, delete: if request.auth.uid == userId;
+//         allow create: if request.auth.uid != null;
+//       }
+//     }
+//   }
