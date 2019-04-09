@@ -70,7 +70,7 @@ auth.onAuthStateChanged(user=>{
                
             )
             document.querySelectorAll(".logged-out").forEach(items=>
-                items.setAttribute("style","display:block ")
+                items.setAttribute("style","display:block width:10px")
                 
             )
         }

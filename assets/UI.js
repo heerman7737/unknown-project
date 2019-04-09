@@ -25,21 +25,25 @@ var config = {
           console.log(category)
           let date=document.getElementById("date").value.trim();
           console.log(date)
+          let body=document.getElementById("body").value.trim();
+          console.log(body)
           db.collection("Post").doc(document.getElementById("title").value).set({
               title: title,
               category:category,
-              date:date
+              date:date,
+              body:body
       
            })
            document.getElementById("title").value=""
            document.getElementById("category").value=""
-      
+           document.getElementById("date").value=""
+           document.getElementById("body").value=""
         })
-        let number=1
+        let number=0
         db.collection('Post').onSnapshot(({docs})=>{
           docs.forEach(doc=>{
               console.log(doc.data())
-              let {title,category}=doc.data()
+              let {title,category,date,body}=doc.data()
               let currentPost=document.createElement("tr")
               number++
               currentPost.innerHTML=`
@@ -48,9 +52,16 @@ var config = {
                   <td>${title}</td>
                   <td>${category}</td>
                   <td>${date}</td>
+                  <td>
+                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#detail-modal">
+                          <i class="fas fa-angle-double-right"></i>Details
+                      </a>
+                  </td>
                   </tr>`
               document.getElementById("displayblog").append(currentPost)
-      
+            let detailPost=document.createElement("h6")
+            detailPost.innerHTML=`${body}`
+            document.getElementById("detail-modal").append(detailPost)
       
           })
       })
