@@ -23,9 +23,6 @@
                             <a href="../index.HTML" class="nav-link">Homepage</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a href="#" class="nav-link">Dashboard</a>
-                        </li>
-                        <li class="nav-item px-2">
                             <a href="blogpost.html" class="nav-link">Post</a>
                         </li>
                         <!-- We do not need this portion
@@ -167,7 +164,7 @@
                             </thead>
                             <tbody id="displayblog">
                                 <!--Placeholder should be added dynamically with js-->
-                                <tr>
+                                <!-- <tr>
                                     <td>1</td>
                                     <td>Post One</td>
                                     <td>Beach</td>
@@ -180,7 +177,7 @@
                                     <th>
                                         <button>Finished</button>
                                     </th>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -200,11 +197,11 @@
                 <div class="modal-body">
                     <form action="">
                         <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control" id="title">
+                            <label for="title">Subject</label>
+                            <input type="text" class="form-control" id="title" required>
                         </div>
                         <div class="form-group">
-                            <label for="category">Category</label>
+                            <label for="category">Places</label>
                             <select name="category" id="category" class="form-control">
                                 <option value="Restaurant">Restaurant</option>
                                 <option value="Hotels">Hotels</option>
@@ -214,17 +211,21 @@
                                 <option value="Shopping">Shopping</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="image">Upload Image</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="image">
                                 <label for="image" class="custom-file-label">Choose File</label>
                             </div>
                             <small class="form-text text-muted">Max size 3mb </small>
-                        </div>
+                        </div> -->
+                        <div class="form-group">
+                                <label for="body">Date</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
                             <div class="form-group">
                                 <label for="body">Body</label>
-                                <textarea name="editor" class="form-control" id=""></textarea>
+                                <textarea name="editor" class="form-control" id="editor"></textarea>
                             </div>
                     </form>
                 </div>
