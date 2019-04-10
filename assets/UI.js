@@ -61,7 +61,7 @@ var config = {
               document.getElementById("displayblog").append(currentPost)
             let detailPost=document.createElement("h6")
             detailPost.innerHTML=`<h6>${body}</h6>`
-            document.getElementById("detail-modal").append(detailPost)
+            document.getElementById("detail").append(detailPost)
       
           })
       })

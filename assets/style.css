@@ -133,17 +133,16 @@ body{
     font-size: 15px;
     }
 
-.c-card-body {
+    .c-card-body {
     
-    background:#333;
-    height: auto;
-    width: 100%;
-    white-space: normal;
-    overflow-x: auto;
-    /* word-wrap: break-word; */
-}
-
-.pic {
-    background:#333;
+        background:#333;
+        height: auto;
+        width: 100%;
+        white-space: normal;
+        overflow-x: auto;
+        /* word-wrap: break-word; */
+    }
     
-}
+    .pic {
+        background:#333;
+    }
