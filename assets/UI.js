@@ -31,8 +31,8 @@ var config = {
               title: title,
               category:category,
               date:date,
-              body:body
-      
+              body:body,
+              uid:user.uid
            })
            document.getElementById("title").value=""
            document.getElementById("category").value=""
@@ -40,7 +40,7 @@ var config = {
            document.getElementById("body").value=""
         })
         let number=0
-        db.collection('Post').onSnapshot(({docs})=>{
+        db.collection('Post').where("uid","==",user.uid).onSnapshot(({docs})=>{
           docs.forEach(doc=>{
               console.log(doc.data())
               let {title,category,date,body}=doc.data()
@@ -60,7 +60,7 @@ var config = {
                   </tr>`
               document.getElementById("displayblog").append(currentPost)
             let detailPost=document.createElement("h6")
-            detailPost.innerHTML=`${body}`
+            detailPost.innerHTML=`<h6>${body}</h6>`
             document.getElementById("detail-modal").append(detailPost)
       
           })
