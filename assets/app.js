@@ -1,4 +1,6 @@
 
+let topic=["restaurant","stadiumsarenas","shopping"]
+for(let i=0;i<topic.length;i++){
 var API_KEY = 'HAYOJZ9OtK2eKFqerVsFRG73lttXlxbFYnS3zysVua3xHZPAhjK7LQJsTQfdp5a8S3a9b9bdsMNOj-Fuf1vSrs43wSROe-ldP55_B3JSNdE58PnbHWv0kBIfO5WdXHYx';
 var URL1 = 'https://api.yelp.com/v3/businesses/search?location=losangeles&term&categories=restaurant&limit=20';
 var queryURL1 = `https://cors-anywhere.herokuapp.com/${URL1}`;
@@ -45,13 +47,21 @@ fetch(queryURL2, {
 }).then(res => res.json())
 
     .then(data => {
-        console.log(data)
-        let placeElem = document.getElementById("card2")
-        placeElem.setAttribute('src', data.businesses[10].image_url)
-        let placeName = document.getElementById("card-head2")
-        placeName.innerHTML = data.businesses[10].name
-        let placeLocation = document.getElementById("card-body2")
-        placeLocation.innerHTML = data.businesses[10].location.address1 + " " + data.businesses[10].location.address2 + " " + data.businesses[10].location.address3 + " " + data.businesses[10].location.city
+        
+       
+        let placeElem = document.getElementById(`card${i}`)
+        placeElem.setAttribute("src",data.businesses[5].image_url)
+        let placeName = document.getElementById(`card-head${i}`)
+        placeName.innerHTML = data.businesses[5].name
+        let placeLocation = document.getElementById(`card-body${i}`)
+        placeLocation.innerHTML = data.businesses[5].location.display_address[0]+" "+data.businesses[5].location.display_address[1]
+        function initMap() {
+            // The location of Uluru
+            //    let Mypo = {lat: this.x, lng: this.y};
+            // var uluru = {lat: -25.344, lng: 131.036};
+            // function showPosition(position) {
+            // var uluru = position.coords.latitude + "," + position.coords.longitude;}
+            var place = { lat: data.businesses[5].coordinates.latitude, lng: data.businesses[5].coordinates.longitude };
 
     });
 var URL3 = 'https://api.yelp.com/v3/businesses/search?location=losangeles&term&categories=shopping&limit=20';
