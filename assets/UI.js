@@ -15,39 +15,59 @@ var config = {
     let auth=firebase.auth();
   
     let title,category
-    document.getElementById("submit").addEventListener("click",e=>{
-    e.preventDefault();
-    let title=document.getElementById("title").value.trim();
-    console.log(title);
-    let category=document.getElementById("category").value.trim();
-    console.log(category)
-    db.collection("Post").doc(document.getElementById("title").value).set({
-        title: title,
-        category:category,
+    auth.onAuthStateChanged(user=>{
+      if(user){
+        document.getElementById("submit").addEventListener("click",e=>{
+          e.preventDefault();
+          let title=document.getElementById("title").value.trim();
+          console.log(title);
+          let category=document.getElementById("category").value.trim();
+          console.log(category)
+          let date=document.getElementById("date").value.trim();
+          console.log(date)
+          let body=document.getElementById("body").value.trim();
+          console.log(body)
+          db.collection("Post").doc(document.getElementById("title").value).set({
+              title: title,
+              category:category,
+              date:date,
+              body:body,
+              uid:user.uid
+           })
+           document.getElementById("title").value=""
+           document.getElementById("category").value=""
+           document.getElementById("date").value=""
+           document.getElementById("body").value=""
+        })
+        let number=0
+        db.collection('Post').where("uid","==",user.uid).onSnapshot(({docs})=>{
+          docs.forEach(doc=>{
+              console.log(doc.data())
+              let {title,category,date,body}=doc.data()
+              let currentPost=document.createElement("tr")
+              number++
+              currentPost.innerHTML=`
+              <tr>
+                  <td>${number}</td>
+                  <td>${title}</td>
+                  <td>${category}</td>
+                  <td>${date}</td>
+                  <td>
+                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#detail-modal">
+                          <i class="fas fa-angle-double-right"></i>Details
+                      </a>
+                  </td>
+                  </tr>`
+              document.getElementById("displayblog").append(currentPost)
+            let detailPost=document.createElement("h6")
+            detailPost.innerHTML=`<h6>${body}</h6>`
+            document.getElementById("detail").append(detailPost)
+      
+          })
+      })
+      
+    }})
 
-     })
-     document.getElementById("title").value=""
-     document.getElementById("category").value=""
-
-  })
-  let number=1
-  db.collection('Post').onSnapshot(({docs})=>{
-    docs.forEach(doc=>{
-        console.log(doc.data())
-        let {title,category}=doc.data()
-        let currentPost=document.createElement("tr")
-        number++
-        currentPost.innerHTML=`
-        <tr>
-            <td>${number}</td>
-            <td>${title}</td>
-            <td>${category}</td>
-            </tr>`
-        document.getElementById("displayblog").append(currentPost)
-
-
-    })
-})
 document.querySelector("#logout").addEventListener("click",(e)=>{
   e.preventDefault()
   auth.signOut().then(()=>{
