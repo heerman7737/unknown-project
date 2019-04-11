@@ -14,7 +14,7 @@
 </head>
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm ">
         <div class="container">
             <a class="navbar-brand text-white" href="#"><i class="fab fa-ravelry"></i><!--logo--> Day Trippin LA</a>
             <!--<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
@@ -52,9 +52,9 @@
             <video muted src="Media/My Movie.mp4" autoplay="true" loop="true"></video>
         </div>
         <div class="header-overlay"></div>
-        <div class="header-content">
+        <div class="header-content mx-auto">
             <h1>Welcome to Our Site</h1>
-            <p>Ready to explore Los Angeles the efficient way? We can help with that!</p>
+            <p>Ready to explore Los Angeles? We can help with that!</p>
 
             <!--PlaceHolder for sign in Authentication-->
             <a href="#"class="btn btn-light logged-out" data-toggle="modal" data-target="#signup-modal">
@@ -69,8 +69,9 @@
     <!--About Section-->
     <section class="about section" id="about">
         <div class="container">
-        <h1>About Us</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias minus accusantium maiores excepturi aut perspiciatis, culpa cupiditate. Tempora molestias fuga quibusdam magnam voluptas. Molestiae suscipit dignissimos molestias repudiandae atque commodi! Cumque, voluptas maxime. Nostrum vel omnis repudiandae repellendus a, explicabo eius voluptas molestiae sint nobis atque magnam recusandae provident ullam!</p>
+        <h1 id="aboutTitle">About Us</h1>
+        <p class="aboutDesc">We are four individuals with a passion for traveling and experiencing new things. We have all experienced the pressure to plan trips and pray it all works out. We want to help travelers make their plans work in our neck of the woods, Los Angeles. With this being such a huge city, it can become overwhelming quickly. We wanted to give users the power to search for top destinations while also getting user generated content on the experience at these destinations. From images of beautiful skylines to traffic jam reports the more information on what worked and what didn’t is what we are all about. So, come make plans and share them with your fellow travelers!</p>
+        <h1 class="mt-5" id="apiDis"> Some Recent Favorites </h1>
         </div>
     </section>
    <!-- Sign up -->
@@ -136,97 +137,92 @@
         </div>
       </div>
     <!--Recent Blog Post?-->
-    <div class="card-columns bg-dark d-flex justify-content-around" id="blog">
 
-    <div class="card border-0" style="width: 25rem;">
+
+<div class="card-columns d-flex justify-content-around" id="blog">
+   
+    <div class="card border-0 m-2 rounded" style="width: 25rem;">
             <img  id="card0" class="card-img-top"  alt="Card image cap">
-            <div class="card-body">
-                <h3 id="card-head0"></h3>
-              <p id="card-body0" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class= "maps" id="map0"></div>
-            </div>
-          </div>
-    <div class="card border-0" style="width: 25rem;">
+                <div class="card-body rounded">
+                    <h3 id="card-head0"></h3>
+                         <p id="card-body0" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class= "maps rounded" id="map0"></div>
+                </div>
+    </div>
+    <div class="card border-0 m-2" style="width: 25rem;">
             <img id="card1"class="card-img-top" alt="Card image cap">
-            <div class="card-body">
-                <h3 id="card-head1"></h3>
-              <p id="card-body1"class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class= "maps" id="map1"></div>
-            </div>
-          </div>
-    <div class="card border-0" style="width: 25rem;">
+                <div class="card-body rounded">
+                    <h3 id="card-head1"></h3>
+                    <p id="card-body1"class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class= "maps rounded" id="map1"></div>
+                </div>
+    </div>
+    <div class="card border-0 m-2" style="width: 25rem;">
             <img id="card2"class="card-img-top" src="Images/IMG_2874.JPG" alt="Card image cap">
-            <div class="card-body">
-                <h3 id="card-head2"></h3>
-              <p id="card-body2"class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class= "maps card-img-bot" id="map2"></div>
-            </div>
-          </div>
-        </div>
+                <div class="card-body rounded">
+                    <h3 id="card-head2"></h3>
+                    <p id="card-body2"class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class= "maps card-img-bot rounded" id="map2"></div>
+                </div>
+    </div>
+        
+</div>
 
 
 
  <!--Contribution Section-->
- <section class="contribution section" id="contributors">
+ <section class="contribution section">
   <div class="container">
       <h1 class="pb-3">Contributors</h1>
       <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-6 mb-12">
-              <div class="card h-100 bg-dark">
+              <div class="card h-100" id="contributors">
                   <img class="card-img-top rounded-circle pic" src="Images/Erica.jpg" alt="Erica">
-                  <div class="card-body c-card-body">
+                  <div class="card-body c-card-body" id="card-body">
                       <h4 class="card-title">Erica
                           
                       </h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                          aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque
-                          deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                      <p class="card-text">" I learned styling never ends... " - Erica</p>
                   </div>
               </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 mb-12">
-              <div class="card h-100 bg-dark">
+              <div class="card h-100" id="contributors">
                   <img class="card-img-top rounded-circle pic" src="Images/Giang_pic.png" alt="Giang">
-                  <div class="card-body c-card-body">
+                  <div class="card-body c-card-body" id="card-body">
                       <h4 class="card-title">Giang
                           
                       </h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
-                          euismod odio, gravida pellentesque urna varius vitae.</p>
+                      <p class="card-text">" I learn nothing beside git push and git pull origin master, seriously " - Giang.</p>
                   </div>
               </div>
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-6 mb-12">
-              <div class="card h-100 bg-dark">
+              <div class="card h-100" id="contributors">
                   <img class="card-img-top rounded-circle pic" src="Images/LeoContribution.JPG" alt="Leo">
-                  <div class="card-body c-card-body">
+                  <div class="card-body c-card-body" id="card-body">
                       <h4 class="card-title">Leo
                   
                       </h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                          quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus
-                          necessitatibus
-                          et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                      <p class="card-text">" I spent 6 hours experiment with firebase hosting, and honestly firebase hosting sucks. Long live Github " - Leo</p>
                   </div>
               </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 mb-12">
-              <div class="card h-100 bg-dark">
+              <div class="card h-100" id="contributors">
                   <div><img class="card-img-top rounded-circle" src="images/Kyle.JPG" alt="Kyle"></div>
-                  <div class="card-body c-card-body">
+                  <div class="card-body c-card-body" id="card-body">
                       <h4 class="card-title">Kyle
                           
                       </h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                          viverra
-                          euismod odio, gravida pellentesque urna varius vitae.</p>
+                      <p class="card-text">Kyle was unable to give us a quote</p>
                   </div>
               </div>
           </div>
 </section>
     <!--Footer-->
-    <footer id="main-footer" class="bg-light">
+    <footer id="main-footer" class="text-white">
             <div class="container">
                 <div class="row">
                     <div class="col text-center py-4 text-black">
