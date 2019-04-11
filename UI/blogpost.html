@@ -6,26 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Oleo+Script" rel="stylesheet">
+    <link rel="stylesheet" href="assets/post.css">
     <title>User Blog Post</title>
 </head>
 <body>
     <!--Navbar-->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+        <nav class="navbar navbar-expand navbar-dark  p-0">
                 <div class="container">
-                    <a href="#" class="navbar-brand">Day Trips</a>
-                   <!-- <button class="navbar-toogler" data-toggle="collapse" data-target="#userNav">
+                    <a href="#" class="navbar-brand">Users Post</a>
+                   <!--<button class="navbar-toogler" data-toggle="collapse" data-target="#userNav">
                     <span class="navbar-toggler-icon"></span>
-                    </button>--> 
+                    </button>-->
                         <div class="collapse navbar-collapse" id="userNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item px-2">
-                                    <a href="#" class="nav-link">Dashboard</a>
+                                    <a href="/UI/UI.HTML" class="nav-link">Dashboard</a>
                                 </li>
                                 <li class="nav-item px-2">
-                                    <a href="#" class="nav-link">Post</a>
-                                </li>
-                                <li class="nav-item px-2">
-                                    <a href="#" class="nav-link">Users</a>
+                                    <a href="/Contact Page/contact.html" class="nav-link">Contact</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ml-auto">
@@ -36,61 +35,123 @@
                                 </li>
                             </ul>
                         </div>
+                   
                 </div>
             </nav>
                             <!--Header-->
-            <header id="main-header" class="py-2 bg-secondary text-white">
-                    <div class="container">
+            <header id="main-header" class="py-2  text-white">
+                    <div class="container" >
                         <div class="col-lg-8">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h1>Users Post</h1>
+                                    <h1 class="pageTitle mt-4">Day Tripping LA</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </header>
 
-<!--Post Section -->
-            <div class="container d-flex justify-content-center mt-3 mb-3">
-                <!--container for post -->
-                <div class="col-md-4">
-                <div class="card mb-3">
-                    <img class="card-img-top" id="image" src="/Images/IMG_2874.JPG" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title text-center" id="title" >Post title</h5>
-                      <p class="card-text" id="body">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-            
-                <div class="col-md-4">
-                <div class="card mb-3">
-                    <img class="card-img-top" id="image" src="/Images/IMG_2874.JPG" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title text-center" id="title" >Post title</h5>
-                      <p class="card-text" id="body">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
+<!--Post Section dummy filler -->
+<div class="card-columns pl-5 pr-5 pt-5 pb-5">
+    <div class="card border-dark">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/300x200?losangeles" alt="">
+        <div class="card-body">
+            <h4 class="card-title">My first trip to LA!!!</h4>
+            <p class="card-text">This Trip was so awesome I can wait to share all the details in my lastest post!</p>
+        </div>
+    </div>   
+    <div>
+        <div class="card bg-secondary text-white p-4 border-dark">
+            <h3 class="card-title">I wish I had more time ...</h3>
+            <h5 class="card-text">I was only able to do half the things on my list!</h5>
+            <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+        </div>
+    </div>
+    <div class="card border-dark">
+        <img class="card-img-top img-fluid"src="https://source.unsplash.com/random/301x200?lakers" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Laker Nation!</h4>
+            <p class="card-text">I came all the way to La to see the lakers and they didnt dissapoint! The staples center is amazing plenty of things to do before and after at Downtown Live it was worth the traffic getting there for sure! </p>
+            <p class="card-text">
+                <small class="text-muted">Last updated 5 mins ago</small>
+            </p>
+        </div>
+    </div>
+    <div class="card border-dark bg-secondary">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/302x200?hollywood" alt="">
+        <h4 class="card-title text-center pt-2 text-white">HollyWood Trip</h4>
+    </div>
+    <div class="card border-dark">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/301x200?concert" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Music To My Ears</h4>
+            <p class="card-text">This was an amazing show and the venue was to die for. Will be adding details on the best stands and shortest lines. Plus where to get the cheapest parking thats close and safe!</p>
+            <p class="card-text">
+                <small class="text-muted">Last updated 7 mins ago</small>
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="card bg-dark p-3 text-white border-dark">
+            <h4 class="card-title">Great Food</h4>
+            <p class="card-text">Had the best hotdog ever. Thanks Pinks.</p>
+            <p class="card-text">
+                <small class="text-muted">Last updated 13 mins ago</small>
+            </p>
+        </div>
+    </div>
+    <div class="card bg-secondary">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/302x200?santamonica" alt="">
+        <h4 class="card-title text-center text-white pt-2">Santa Monica Days</h4>
+    </div>
+    <div class="card border-dark">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/301x200?venicebeach" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Venice Beach Vibes</h4>
+            <p class="card-text">So many cool things so little time. We got los there all day and left in a blissful daze. New favorite place.</p>
+            <p class="card-text">
+                <small class="text-muted">Last updated 19 mins ago</small>
+            </p>
+        </div>
+    </div>
+    <div class="card border-dark">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/301x200?venicebeach" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Venice Beach Vibes</h4>
+            <p class="card-text">So many cool things so little time. We got los there all day and left in a blissful daze. New favorite place.</p>
+            <p class="card-text">
+                <small class="text-muted">Last updated 20 mins ago</small>
+            </p>
+        </div>
+    </div>
+   
+    <div class="card border-dark bg-dark">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/302x200?gettycenter" alt="">
+        <h4 class="card-title text-center pt-2 text-white">The Getty Was A Dream </h4>
+    </div>
+    <div>
+        <div class="card bg-dark p-3 text-white border-dark">
+            <h4 class="card-title">Great Food</h4>
+            <p class="card-text">Had the best hotdog ever. Thanks Pinks.</p>
+            <p class="card-text">
+                <small class="text-muted">Last updated 32 mins ago</small>
+            </p>
+        </div>
+    </div>
+    <div class="card border-dark bg-secondary">
+        <img class="card-img-top img-fluid" src="https://source.unsplash.com/random/302x200?surfing" alt="">
+        <h4 class="card-title text-center pt-2 text-white">Surfing CA</h4>
+    </div>
+</div>
 
-                <div class="col-md-4">
-                <div class="card mb-3">
-                    <img class="card-img-top" id="image" src="/Images/IMG_2874.JPG" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title text-center" id="title" >Post title</h5>
-                      <p class="card-text" id="body">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-            
-            </div>
-            
+</div>
  <!--Footer-->
-<footer id="main-footer" class="bg-dark fixed-bottom">
+<footer id="main-footer" class="footer">
         <div class="container">
             <div class="row">
-                <div class="col text-center py-4 text-white">
+                <div class="col text-center text-white py-3">
                 <h3>Unknown-Project</h3>
                 <p>Copyright &copy; <span id="year"></span>
                 </p>

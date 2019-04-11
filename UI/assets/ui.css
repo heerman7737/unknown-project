@@ -1,0 +1,16 @@
+body {
+    background: black;
+}
+
+.footer ,
+#main-header,
+.navbar-brand ,
+.location-timezone {
+    font-family: 'Oleo Script', cursive;
+}
+
+
+#main-header {
+    background:black;
+}
+
