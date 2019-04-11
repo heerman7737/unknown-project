@@ -24,7 +24,7 @@ document.querySelector('#signup-button').addEventListener("click",(e)=>{
         console.log(cre)
         $('#signup-modal').modal('hide');
         document.querySelector('#signup-form').reset();
-        window.location = './UI/UI.HTML'
+        window.location = './UI/UI.html'
     })
 })
 //Login
@@ -39,7 +39,7 @@ document.querySelector('#login-button').addEventListener("click",(e)=>{
         console.log(cre)
         $('#login-modal').modal('hide');
         document.querySelector('#login-form').reset();
-        window.location = './UI/UI.HTML'
+        window.location = './UI/UI.html'
     })
 })
 
