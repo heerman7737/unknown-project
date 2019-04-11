@@ -72,6 +72,6 @@ document.querySelector("#logout").addEventListener("click",(e)=>{
   e.preventDefault()
   auth.signOut().then(()=>{
       console.log("work")
-      window.location = '../index.HTML'
+      window.location = '../index.html'
   })
 })
