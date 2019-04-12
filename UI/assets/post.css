@@ -1,0 +1,38 @@
+.body {
+    background: black;
+}
+
+.pageTitle {
+    font-family: 'Oleo Script', cursive;
+}
+
+#main-header {
+    background: black
+}
+
+#main-footer {
+    background: black;
+    font-family: 'Oleo Script', cursive;
+    
+}
+
+.card-columns {
+    background:linear-gradient(black,#068394);
+}
+
+#app {
+        background:black;
+        margin: auto;
+        height: auto;
+        z-index: -5;
+        background-size: 100% 100%;		    
+}
+
+.navbar {
+    background:black;
+    font-family:'Fjalla One', sans-serif;
+}
+
+.navbar-brand{
+    font-family: 'Oleo Script', cursive;
+}
